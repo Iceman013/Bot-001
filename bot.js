@@ -2640,7 +2640,7 @@ bot.on('message', function (user, userID, channelID, message, evt, typing, embed
         }
         switch(cmd) {
             case "aSend":
-                if (message.substring(7, 8) == "<" && bot.users[message.substring(9, 27) == undefined) {
+                if (message.substring(7, 8) == "<" && bot.users[message.substring(9, 27)] == undefined) {
                     bot.sendMessage({
                         to: message.substring(9, 27),
                         message: 'An anonymous user said, "' + message.substring(28, message.length)}) + '".'
@@ -2659,7 +2659,7 @@ bot.on('message', function (user, userID, channelID, message, evt, typing, embed
         }
         switch(cmd) {
             case "send":
-                if (message.substring(6, 7) == "<" && message.substring(8, 26) == undefined){
+                if (message.substring(6, 7) == "<" && bot.users[message.substring(8, 26)] == undefined){
                     bot.sendMessage({
                         to: message.substring(8, 26),
                         message: bot.fixMessage("<@" + userID + ">").substring(1, bot.fixMessage("<@" + userID + ">").length) + ' said, "' + message.substring(28, message.length)}) + '".'
@@ -2667,7 +2667,7 @@ bot.on('message', function (user, userID, channelID, message, evt, typing, embed
                         to: "509208261824872459",
                         message: userID + ' said, "' + message.substring(28, message.length) + '" to ' + message.substring(8, 26) + '.'})
                 }
-                if (message.substring(6, 7) != "<" && message.substring(6, 24) == undefined){
+                if (message.substring(6, 7) != "<" && bot.users[message.substring(6, 24)] == undefined){
                     bot.sendMessage({
                         to: message.substring(6, 24),
                         message: bot.fixMessage("<@" + userID + ">").substring(1, bot.fixMessage("<@" + userID + ">").length) + ' said, "' + message.substring(25, message.length)}) + '".'
