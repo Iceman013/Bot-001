@@ -3337,8 +3337,8 @@ bot.on('message', function (user, userID, channelID, message, evt, typing, embed
                 }
                 if (a == 50){
                     titlePart = "aSend {location} {message}"
-                    upperPart = "< location >\nThis can be a user or a channel that will receive the message.\n< message >\nThis will be sent to the location."
-                    purpose = "This will send a message without information on who sent it."
+                    upperPart = "< location >\nThis is a channel that will receive the message.\n< message >\nThis will be sent to the location."
+                    purpose = "This will send a message with information on who sent it."
                 }
                 if (a == 49){
                     titlePart = "play"
@@ -3487,7 +3487,7 @@ bot.on('message', function (user, userID, channelID, message, evt, typing, embed
                 }
                 if (a == 20){
                     titlePart = "send {receiver} {message}"
-                    upperPart = "< receiver >\nThis can be a channel that will be sent a message or a userID to receive a DM.\n< message >\nThis will be sent along with your information."
+                    upperPart = "< receiver >\nThis is a channel that will be sent a message.\n< message >\nThis will be sent along with your information."
                     purpose = "Users can send messages anywhere."
                 }
                 if (a == 19){
