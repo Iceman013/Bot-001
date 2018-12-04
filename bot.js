@@ -2640,7 +2640,7 @@ bot.on('message', function (user, userID, channelID, message, evt, typing, embed
         }
         switch(cmd) {
             case "aSend":
-                if (message.substring(7, 8) == "<") {
+                if (message.substring(7, 8) == "<" && bot.users[message.substring(9, 27) == undefined) {
                     bot.sendMessage({
                         to: message.substring(9, 27),
                         message: 'An anonymous user said, "' + message.substring(28, message.length)}) + '".'
@@ -2648,7 +2648,7 @@ bot.on('message', function (user, userID, channelID, message, evt, typing, embed
                         to: "509208261824872459",
                         message: userID + ' secretly said, "' + message.substring(28, message.length) + '" to ' + message.substring(8, 27) + '.'})
                 }
-                else {
+                if (message.substring (7, 8) != "<" && bot.users[mesaage.substring(7, 25)] == undefined){
                     bot.sendMessage({
                         to: message.substring(7, 25),
                         message: 'An anonymous user said, "' + message.substring(26, message.length)}) + '".'
@@ -2659,7 +2659,7 @@ bot.on('message', function (user, userID, channelID, message, evt, typing, embed
         }
         switch(cmd) {
             case "send":
-                if (message.substring(6, 7) == "<") {
+                if (message.substring(6, 7) == "<" && message.substring(8, 26) == undefined){
                     bot.sendMessage({
                         to: message.substring(8, 26),
                         message: bot.fixMessage("<@" + userID + ">").substring(1, bot.fixMessage("<@" + userID + ">").length) + ' said, "' + message.substring(28, message.length)}) + '".'
@@ -2667,7 +2667,7 @@ bot.on('message', function (user, userID, channelID, message, evt, typing, embed
                         to: "509208261824872459",
                         message: userID + ' said, "' + message.substring(28, message.length) + '" to ' + message.substring(8, 26) + '.'})
                 }
-                else {
+                if (message.substring(6, 7) != "<" && message.substring(6, 24) == undefined){
                     bot.sendMessage({
                         to: message.substring(6, 24),
                         message: bot.fixMessage("<@" + userID + ">").substring(1, bot.fixMessage("<@" + userID + ">").length) + ' said, "' + message.substring(25, message.length)}) + '".'
@@ -3219,7 +3219,7 @@ bot.on('message', function (user, userID, channelID, message, evt, typing, embed
         }
         var commandFun = ["joke","art","wyr","noU","songs","addSong","userSong","8b","8ball","bio","setBio"]
         var commandUseful = ["help","startPoll","pollQ","vote","stopPoll","pollResults","test","send","owner","feedback","new","rename","aSend","userInfo","roleInfo","pin","poll","rep","link","info","credits","upvote"]
-        var commandGames = ["backup","join","guess","money","currency","cash","bucks","balance","top","daily","mine","inv","sell","give","pickup","caves","subscribe","travel","watch","play","rps"]
+        var commandGames = ["backup","join","guess","money","currency","cash","bucks","balance","top","daily","mine","inv","sell","give","pickup","caves","subscribe","travel","watch","play","rps","played","players"]
         if (message == b + "help"){
             var funfun = "`" + commandFun[0] + "`"
             a = 1
@@ -3259,7 +3259,7 @@ bot.on('message', function (user, userID, channelID, message, evt, typing, embed
                         }]}})
         }
         var myCommands = ["busy","ready","bored","switch","toggle","spam","stop","goodbyeWorld","settings","addHelp"]
-        var commandList = ["help","joke","toggle","rep","art","wyr","noU","songs","addSong","userSong","startPoll","pollQ","vote","stopPoll","pollResults","spam","stop","test","goodbyeWorld","settings","send","owner","backup","join","guess","money","currency","cash","bucks","balance","top","daily","mine","inv","sell","give","pickup","feedback","new","caves","rename","subscribe","busy","ready","bored","travel","8b","8ball","watch","play","aSend","rps","userInfo","roleInfo","pin","poll","credits","link","info","bio","setBio","credits","upvote"]
+        var commandList = ["help","joke","toggle","rep","art","wyr","noU","songs","addSong","userSong","startPoll","pollQ","vote","stopPoll","pollResults","spam","stop","test","goodbyeWorld","settings","send","owner","backup","join","guess","money","currency","cash","bucks","balance","top","daily","mine","inv","sell","give","pickup","feedback","new","caves","rename","subscribe","busy","ready","bored","travel","8b","8ball","watch","play","aSend","rps","userInfo","roleInfo","pin","poll","credits","link","info","bio","setBio","credits","upvote","played","players"]
         if (message.substring(0, 5) == b + "help" && message.length != 5){
             var which = message.substring(6, message.length)
             if (commandList.includes(which)){
@@ -3269,6 +3269,16 @@ bot.on('message', function (user, userID, channelID, message, evt, typing, embed
                 a = -1
                 while (a < commandList.length && commandList[a] != which){
                     a = a + 1
+                }
+                if (a == 63){
+                    titlePart = "players"
+                    upperPart = ""
+                    purpose = "This tells you how many people have already joined the trust game."
+                }
+                if (a == 62){
+                    titlePart = "played"
+                    upperPart = ""
+                    purpose = "This will tell you how many people have already guessed in the trust game."
                 }
                 if (a == 61){
                     titlePart = "upvote"
