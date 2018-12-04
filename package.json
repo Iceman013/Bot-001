@@ -1,7 +1,7 @@
 {
   "name": "Bot 001",
   "version": "1.0.0",
-  "description": "Ensure order and lack of chaos. This bot will organize people.",
+  "description": "This bot has fun games and useful commands.",
   "main": "bot.js",
   "author": "Bret",
   "dependencies": {
