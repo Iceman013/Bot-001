@@ -167,7 +167,8 @@ var epic = []
 var mythic = []
 var legendary = []
 var fabled = []
-users = ["486985623161274378","485628261494292505","393586279964475393","336507246227881984","193104123506196481","458809225120972800","194966921362407424","495705429150793739","496000252290138122","393083960084922368","205680187394752512"]
+var fabled = []
+users = ["486985623161274378","485628261494292505","393586279964475393","336507246227881984","193104123506196481","458809225120972800","194966921362407424","495705429150793739","496000252290138122","393083960084922368","205680187394752512","486985623161274378","485628261494292505","393586279964475393","336507246227881984","193104123506196481","458809225120972800","194966921362407424","495705429150793739","496000252290138122"]
 points = [1638,713,1106,3,0,71,0,0,0,198,4]
 thisDay = [4,1,30,2,16,18,16,16,16,2,0]
 common = [35,1,1,24,0,5,0,0,0,0,0]
@@ -202,10 +203,11 @@ var caves = [2,1,1,1,1,1,1,1,1,1,1]
 var unlocked = [7,2,4,5,0,1,0,0,0,1,0]
 var streak = [4,1,1,2,1,1,1,1,1,1,0]
 var time = [0,0,0,0,0,0,0,0,0,0,329592,0,0]
-var bio = ["Just say $info to see my full information.","none","we are going to be in the office you use","none","none","none","none","none","none","none","undefined"]
-var i = 1;
-while (i < 10){
-    users[users.length] = data[i.toString()]["id"]
+var bio = ["Just say $info to see my full information.","none","we are going to be in the office you use","none","none","none","none","none","none","none","undefined","undefined","undefined","undefined","undefined","undefined","undefined","undefined","undefined","undefined"]
+var i = 0;
+var timeStamp = []
+while (i < users.length){
+    timeStamp[i] = new Date()
     i = i + 1
 }
 var userSongs = ["Weird Al Ebay"]
