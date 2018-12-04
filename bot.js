@@ -3172,6 +3172,12 @@ bot.on('message', function (user, userID, channelID, message, evt, typing, embed
                     bot.disconnect()
             }
         }
+        switch(cmd){
+            case "upvote":
+                bot.sendMessage({
+                    to: channelID,
+                    message: "https://discordbots.org/bot/495703108912021545/vote"})
+         
         a = -1
         while (a < joins.length) {
             a = a + 1
