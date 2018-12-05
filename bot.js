@@ -826,7 +826,7 @@ bot.on('message', function (user, userID, channelID, message, evt, typing, embed
             to: channelID,
             message: "You sold " + message.substring(10, message.length) + " special gems for " + parseInt(gain) + " :gem:s."})
     }
-    if (message.substring(0, 4) == b + "inv" && users.includes(userID) == false){
+    if (message.substring(0, 4) == b + "inv" && message.substring(0, 7) != b + "invite" && users.includes(userID) == false){
         bot.sendMessage({
             to: channelID,
             message: "You are not a member. Register."})
