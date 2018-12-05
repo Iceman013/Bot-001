@@ -831,7 +831,7 @@ bot.on('message', function (user, userID, channelID, message, evt, typing, embed
             to: channelID,
             message: "You are not a member. Register."})
     }
-    if (message.substring(0, 4) == b + "inv" && users.includes(userID)){
+    if (message.substring(0, 4) == b + "inv" && message.substring(0, 7) != b + "invite" && users.includes(userID)){
         a = 0
         while (a < users.length) {
             if (users[a] == userID) {
