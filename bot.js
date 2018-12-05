@@ -3183,6 +3183,12 @@ bot.on('message', function (user, userID, channelID, message, evt, typing, embed
                     to: channelID,
                     message: "https://discordbots.org/bot/495703108912021545/vote"})
         }
+        switch(cmd){
+            case "invite":
+                bot.sendMessage({
+                    to: channelID,
+                    message: "https://discordapp.com/oauth2/authorize?&client_id=495703108912021545&scope=bot&permissions=8"})
+        }
         a = -1
         while (a < joins.length) {
             a = a + 1
@@ -3218,7 +3224,7 @@ bot.on('message', function (user, userID, channelID, message, evt, typing, embed
             B = -B
         }
         var commandFun = ["joke","art","wyr","noU","songs","addSong","userSong","8b","8ball","bio","setBio"]
-        var commandUseful = ["help","startPoll","pollQ","vote","stopPoll","pollResults","test","send","owner","feedback","new","rename","aSend","userInfo","roleInfo","pin","poll","rep","link","info","credits","upvote"]
+        var commandUseful = ["help","startPoll","pollQ","vote","stopPoll","pollResults","test","send","owner","feedback","new","rename","aSend","userInfo","roleInfo","pin","poll","rep","link","info","credits","upvote","invite"]
         var commandGames = ["backup","join","guess","money","currency","cash","bucks","balance","top","daily","mine","inv","sell","give","pickup","caves","subscribe","travel","watch","play","rps","played","players"]
         if (message == b + "help"){
             var funfun = "`" + commandFun[0] + "`"
@@ -3259,7 +3265,7 @@ bot.on('message', function (user, userID, channelID, message, evt, typing, embed
                         }]}})
         }
         var myCommands = ["busy","ready","bored","switch","toggle","spam","stop","goodbyeWorld","settings","addHelp"]
-        var commandList = ["help","joke","toggle","rep","art","wyr","noU","songs","addSong","userSong","startPoll","pollQ","vote","stopPoll","pollResults","spam","stop","test","goodbyeWorld","settings","send","owner","backup","join","guess","money","currency","cash","bucks","balance","top","daily","mine","inv","sell","give","pickup","feedback","new","caves","rename","subscribe","busy","ready","bored","travel","8b","8ball","watch","play","aSend","rps","userInfo","roleInfo","pin","poll","credits","link","info","bio","setBio","credits","upvote","played","players"]
+        var commandList = ["help","joke","toggle","rep","art","wyr","noU","songs","addSong","userSong","startPoll","pollQ","vote","stopPoll","pollResults","spam","stop","test","goodbyeWorld","settings","send","owner","backup","join","guess","money","currency","cash","bucks","balance","top","daily","mine","inv","sell","give","pickup","feedback","new","caves","rename","subscribe","busy","ready","bored","travel","8b","8ball","watch","play","aSend","rps","userInfo","roleInfo","pin","poll","credits","link","info","bio","setBio","credits","upvote","played","players","invite"]
         if (message.substring(0, 5) == b + "help" && message.length != 5){
             var which = message.substring(6, message.length)
             if (commandList.includes(which)){
@@ -3269,6 +3275,11 @@ bot.on('message', function (user, userID, channelID, message, evt, typing, embed
                 a = -1
                 while (a < commandList.length && commandList[a] != which){
                     a = a + 1
+                }
+                if (a == 64){
+                    titlePart = "invite"
+                    upperPart = ""
+                    purpose = "This will give you the link to invite me to other servers."
                 }
                 if (a == 63){
                     titlePart = "players"
