@@ -168,23 +168,9 @@ var mythic = []
 var legendary = []
 var fabled = []
 var fabled 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 users = ["486985623161274378","485628261494292505","393586279964475393","336507246227881984","193104123506196481","458809225120972800","194966921362407424","495705429150793739","496000252290138122","393083960084922368","205680187394752512","478622622695948312"]
-points = [1638,713,1097,70,0,71,0,0,0,198,4,115,0,2,67,0,0,0,0,0,5,0,0,0]
-thisDay = [4,1,4,4,16,18,16,16,16,2,0,4,0,4,4,0,0,0,0,0,4,0,0,0]
+points = [1747,713,1097,164,0,71,0,0,0,198,4,115,0,2,67,0,0,0,0,0,5,0,0,0]
+thisDay = [12,1,4,12,16,18,16,16,16,2,0,4,0,4,4,0,0,0,0,0,4,0,0,0]
 common = [35,1,2,27,0,5,0,0,0,0,0,0,0,2,0,0,0,0,0,0,3,0,0,0]
 uncommon = [19,0,0,8,0,2,0,0,0,0,0,0,0,3,1,0,0,0,0,0,2,0,0,0]
 rare = [4,0,0,4,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0]
@@ -215,10 +201,9 @@ var fh = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 var ft = [1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 var caves = [0,1,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
 var unlocked = [7,2,4,5,0,1,0,0,0,1,0,1,0,1,1,0,0,0,0,0,1,0,0,0]
-var streak = [4,1,1,1,1,1,1,1,1,1,0,1,0,1,1,0,0,0,0,0,1,0,0,0]
+var streak = [1,1,1,1,1,1,1,1,1,1,0,1,0,1,1,0,0,0,0,0,1,0,0,0]
 var time = [0,0,0,0,0,0,0,0,0,0,329592,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 var bio = ["Just say $info to see my full information.","none","we are going to be in the office you use","none","none","none","none","none","none","none","undefined","undefined"]
-
 var i = 0;
 var timeStamp = []
 while (i < users.length){
@@ -3043,6 +3028,41 @@ bot.on('message', function (user, userID, channelID, message, evt, typing, embed
                                 value: shakey[ans]}]}})
         }
         switch(cmd) {
+            case "suggest":
+                bot.sendMessage({
+                    to: channelID,
+                    message: ":card_box: Your suggestion has been filed. It can be checked in the support server. :card_box:"}, function(err, res){
+                    bot.sendMessage({
+                        to: "522548537574162462",
+                        embed: {
+                            color: 3050971,
+                            timestamp: new Date(),
+                            footer: {
+                                icon_url: "",
+                                text: "User Suggestion",
+                            },
+                            author: {
+                                name: bot.fixMessage("<@" + userID + ">").substring(1, bot.fixMessage("<@" + userID + ">").length),
+                                icon_url: "",
+                            },
+                            title: "New Suggestion",
+                            description: message.substring(9, message.length)}}, function(err, res){
+                        bot.addReaction({
+                            channelID: "522548537574162462",
+                            messageID: res.id,
+                            reaction: ":thumbsup:"
+                        }, function(err, res){
+                            bot.addReaction({
+                                channelID: "522548537574162462",
+                                messageID: res.id,
+                                reaction: ":repeat:"
+                            }, function(err, res){
+                                bot.addReaction({
+                                    channelID: "522548537574162462",
+                                    messageID: res.id,
+                                    reaction: ":thumbsdown:"})})})})})
+        }
+        switch(cmd) {
             case "feedback":
                 bot.sendMessage({
                     to: channelID,
@@ -3234,7 +3254,7 @@ bot.on('message', function (user, userID, channelID, message, evt, typing, embed
             B = -B
         }
         var commandFun = ["joke","art","wyr","noU","songs","addSong","userSong","8b","8ball","bio","setBio"]
-        var commandUseful = ["help","startPoll","pollQ","vote","stopPoll","pollResults","test","send","owner","feedback","new","rename","aSend","userInfo","roleInfo","pin","poll","rep","link","info","credits","upvote","invite"]
+        var commandUseful = ["help","startPoll","pollQ","vote","stopPoll","pollResults","test","send","owner","feedback","new","rename","aSend","userInfo","roleInfo","pin","poll","rep","link","info","credits","upvote","invite","suggest"]
         var commandGames = ["backup","join","guess","money","currency","cash","bucks","balance","top","daily","mine","inv","sell","give","pickup","caves","subscribe","travel","watch","play","rps","played","players"]
         if (message == b + "help"){
             var funfun = "`" + commandFun[0] + "`"
@@ -3275,7 +3295,7 @@ bot.on('message', function (user, userID, channelID, message, evt, typing, embed
                         }]}})
         }
         var myCommands = ["busy","ready","bored","switch","toggle","spam","stop","goodbyeWorld","settings","addHelp"]
-        var commandList = ["help","joke","toggle","rep","art","wyr","noU","songs","addSong","userSong","startPoll","pollQ","vote","stopPoll","pollResults","spam","stop","test","goodbyeWorld","settings","send","owner","backup","join","guess","money","currency","cash","bucks","balance","top","daily","mine","inv","sell","give","pickup","feedback","new","caves","rename","subscribe","busy","ready","bored","travel","8b","8ball","watch","play","aSend","rps","userInfo","roleInfo","pin","poll","credits","link","info","bio","setBio","credits","upvote","played","players","invite"]
+        var commandList = ["help","joke","toggle","rep","art","wyr","noU","songs","addSong","userSong","startPoll","pollQ","vote","stopPoll","pollResults","spam","stop","test","goodbyeWorld","settings","send","owner","backup","join","guess","money","currency","cash","bucks","balance","top","daily","mine","inv","sell","give","pickup","feedback","new","caves","rename","subscribe","busy","ready","bored","travel","8b","8ball","watch","play","aSend","rps","userInfo","roleInfo","pin","poll","credits","link","info","bio","setBio","credits","upvote","played","players","invite","suggest"]
         if (message.substring(0, 5) == b + "help" && message.length != 5){
             var which = message.substring(6, message.length)
             if (commandList.includes(which)){
@@ -3285,6 +3305,11 @@ bot.on('message', function (user, userID, channelID, message, evt, typing, embed
                 a = -1
                 while (a < commandList.length && commandList[a] != which){
                     a = a + 1
+                }
+                if (a == 65){
+                    titlePart = "suggest {idea}"
+                    upperPart = "< idea >\nPut a suggestion for the bot here."
+                    purpose = "This will allow you to suggest new things."
                 }
                 if (a == 64){
                     titlePart = "invite"
