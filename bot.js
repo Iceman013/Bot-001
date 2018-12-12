@@ -3038,12 +3038,12 @@ bot.on('message', function (user, userID, channelID, message, evt, typing, embed
                             color: 3050971,
                             timestamp: new Date(),
                             footer: {
-                                icon_url: "",
+                                icon_url: "'https://cdn.discordapp.com/avatars/' + userID + '/' + bot.users[userID].avatar + '.png?size=32'",
                                 text: "User Suggestion",
                             },
                             author: {
                                 name: bot.fixMessage("<@" + userID + ">").substring(1, bot.fixMessage("<@" + userID + ">").length),
-                                icon_url: "",
+                                icon_url: "'https://cdn.discordapp.com/avatars/' + "495703108912021545" + '/' + bot.users["495703108912021545"].avatar + '.png?size=32'",
                             },
                             title: "New Suggestion",
                             description: message.substring(9, message.length)}}, function(err, res){
