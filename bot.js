@@ -3295,7 +3295,7 @@ bot.on('message', function (user, userID, channelID, message, evt, typing, embed
                         }]}})
         }
         var myCommands = ["busy","ready","bored","switch","toggle","spam","stop","goodbyeWorld","settings","addHelp"]
-        var commandList = ["help","joke","toggle","rep","art","wyr","noU","songs","addSong","userSong","startPoll","pollQ","vote","stopPoll","pollResults","spam","stop","test","goodbyeWorld","settings","send","owner","backup","join","guess","money","currency","cash","bucks","balance","top","daily","mine","inv","sell","give","pickup","feedback","new","caves","rename","subscribe","busy","ready","bored","travel","8b","8ball","watch","play","aSend","rps","userInfo","roleInfo","pin","poll","credits","link","info","bio","setBio","credits","upvote","played","players","invite","suggest"]
+        var commandList = ["help","joke","toggle","rep","art","wyr","noU","songs","addSong","userSong","startPoll","pollQ","vote","stopPoll","pollResults","spam","stop","test","goodbyeWorld","settings","send","owner","backup","join","guess","money","currency","cash","bucks","balance","top","daily","mine","inv","sell","give","pickup","feedback","new","caves","rename","subscribe","busy","ready","bored","travel","8b","8ball","watch","play","aSend","rps","userInfo","roleInfo","pin","poll","credits","link","info","bio","setBio","suggest","upvote","played","players","invite"]
         if (message.substring(0, 5) == b + "help" && message.length != 5){
             var which = message.substring(6, message.length)
             if (commandList.includes(which)){
@@ -3307,29 +3307,29 @@ bot.on('message', function (user, userID, channelID, message, evt, typing, embed
                     a = a + 1
                 }
                 if (a == 65){
-                    titlePart = "suggest {idea}"
-                    upperPart = "< idea >\nPut a suggestion for the bot here."
-                    purpose = "This will allow you to suggest new things."
-                }
-                if (a == 64){
                     titlePart = "invite"
                     upperPart = ""
                     purpose = "This will give you the link to invite me to other servers."
                 }
-                if (a == 63){
+                if (a == 64){
                     titlePart = "players"
                     upperPart = ""
                     purpose = "This tells you how many people have already joined the trust game."
                 }
-                if (a == 62){
+                if (a == 63){
                     titlePart = "played"
                     upperPart = ""
                     purpose = "This will tell you how many people have already guessed in the trust game."
                 }
-                if (a == 61){
+                if (a == 62){
                     titlePart = "upvote"
                     upperPart = ""
                     purpose = "This will allow you to vote for this bot on the bot list."
+                }
+                if (a == 61){
+                    titlePart = "suggest {idea}"
+                    upperPart = "< idea >\nPut a suggestion for the bot here."
+                    purpose = "This will allow you to suggest new things."
                 }
                 if (a == 60){
                     titlePart = "setBio {bio}"
