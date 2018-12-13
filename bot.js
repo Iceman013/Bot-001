@@ -3050,7 +3050,7 @@ bot.on('message', function (user, userID, channelID, message, evt, typing, embed
                         var myThing = res.id
                         a = 0
                         while (a < 1000000){
-                            a = a + 1
+                            a = a + 0.00001
                         }
                         bot.addReaction({
                             channelID: "522548537574162462",
@@ -3059,7 +3059,7 @@ bot.on('message', function (user, userID, channelID, message, evt, typing, embed
                         }, function(err, res){
                             a = 0
                             while (a < 1000000){
-                                a = a + 1
+                                a = a + 0.000001
                             }
                             bot.addReaction({
                                 channelID: "522548537574162462",
@@ -3068,7 +3068,7 @@ bot.on('message', function (user, userID, channelID, message, evt, typing, embed
                             }, function(err, res){
                                 a = 0
                                 while (a < 1000000){
-                                    a = a + 1
+                                    a = a + 0.0000001
                                 }
                                 bot.addReaction({
                                     channelID: "522548537574162462",
