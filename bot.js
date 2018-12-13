@@ -3054,25 +3054,7 @@ bot.on('message', function (user, userID, channelID, message, evt, typing, embed
                         bot.addReaction({
                             channelID: "522548537574162462",
                             messageID: myThing,
-                            reaction: "👍"
-                        }, function(err, res){
-                            a = 0
-                            while (a < 1000000){
-                                a = a + 0.000001
-                            }
-                            bot.addReaction({
-                                channelID: "522548537574162462",
-                                messageID: myThing,
-                                reaction: "🔁"
-                            }, function(err, res){
-                                a = 0
-                                while (a < 1000000){
-                                    a = a + 0.0000001
-                                }
-                                bot.addReaction({
-                                    channelID: "522548537574162462",
-                                    messageID: myThing,
-                                    reaction: "👎"})})})})})
+                            reaction: "👍", console.log)})
         }
         switch(cmd) {
             case "feedback":
