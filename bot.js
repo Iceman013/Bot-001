@@ -169,10 +169,10 @@ var legendary = []
 var fabled = []
 var fabled 
 users = ["486985623161274378","485628261494292505","393586279964475393","336507246227881984","193104123506196481","458809225120972800","194966921362407424","495705429150793739","496000252290138122","393083960084922368","205680187394752512","478622622695948312"]
-points = [1747,713,1097,164,0,71,0,0,0,198,4,115,0,2,67,0,0,0,0,0,5,0,0,0]
-thisDay = [12,1,4,12,16,18,16,16,16,2,0,4,0,4,4,0,0,0,0,0,4,0,0,0]
+points = [1827,799,1097,240,0,71,0,0,0,198,4,115,0,2,67,0,0,0,0,0,5,0,0,0]
+thisDay = [13,13,4,13,16,18,16,16,16,2,0,4,0,4,4,0,0,0,0,0,4,0,0,0]
 common = [35,1,2,27,0,5,0,0,0,0,0,0,0,2,0,0,0,0,0,0,3,0,0,0]
-uncommon = [19,0,0,8,0,2,0,0,0,0,0,0,0,3,1,0,0,0,0,0,2,0,0,0]
+uncommon = [19,0,0,9,0,2,0,0,0,0,0,0,0,3,1,0,0,0,0,0,2,0,0,0]
 rare = [4,0,0,4,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0]
 epic = [1,1,1,5,0,2,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0]
 mythic = [2,0,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
@@ -180,7 +180,7 @@ legendary = [1,0,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 fabled = [1,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0]
 var cc = [8,0,3,19,0,1,0,0,0,0,0,0,0,3,0,0,0,0,0,0,2,0,0,0]
 var ch = [6,0,3,11,0,7,0,0,0,1,0,0,0,2,1,0,0,0,0,0,3,0,0,0]
-var ct = [4,0,2,9,0,1,0,0,0,1,0,0,0,1,2,0,0,0,0,0,3,0,0,0]
+var ct = [4,0,2,10,0,1,0,0,0,1,0,0,0,1,2,0,0,0,0,0,3,0,0,0]
 var uc = [3,0,2,14,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0]
 var uh = [7,0,3,16,0,1,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0]
 var ut = [3,0,2,7,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0]
@@ -201,10 +201,9 @@ var fh = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 var ft = [1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 var caves = [0,1,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
 var unlocked = [7,2,4,5,0,1,0,0,0,1,0,1,0,1,1,0,0,0,0,0,1,0,0,0]
-var streak = [1,1,1,1,1,1,1,1,1,1,0,1,0,1,1,0,0,0,0,0,1,0,0,0]
+var streak = [2,1,1,2,1,1,1,1,1,1,0,1,0,1,1,0,0,0,0,0,1,0,0,0]
 var time = [0,0,0,0,0,0,0,0,0,0,329592,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
-var bio = ["Just say $info to see my full information.","none","we are going to be in the office you use","none","none","none","none","none","none","none","undefined","undefined"]
-var i = 0;
+var bio = ["Just say $info to see my full information.","none","we are going to be in the office you use","none","none","none","none","none","none","none","undefined","undefined"]var i = 0;
 var timeStamp = []
 while (i < users.length){
     timeStamp[i] = new Date()
@@ -3055,7 +3054,7 @@ bot.on('message', function (user, userID, channelID, message, evt, typing, embed
                         bot.addReaction({
                             channelID: "522548537574162462",
                             messageID: myThing,
-                            reaction: ":thumbsup:"
+                            reaction: "👍"
                         }, function(err, res){
                             a = 0
                             while (a < 1000000){
@@ -3064,7 +3063,7 @@ bot.on('message', function (user, userID, channelID, message, evt, typing, embed
                             bot.addReaction({
                                 channelID: "522548537574162462",
                                 messageID: myThing,
-                                reaction: ":repeat:"
+                                reaction: "🔁"
                             }, function(err, res){
                                 a = 0
                                 while (a < 1000000){
@@ -3073,7 +3072,7 @@ bot.on('message', function (user, userID, channelID, message, evt, typing, embed
                                 bot.addReaction({
                                     channelID: "522548537574162462",
                                     messageID: myThing,
-                                    reaction: ":thumbsdown:"})})})})})
+                                    reaction: "👎"})})})})})
         }
         switch(cmd) {
             case "feedback":
