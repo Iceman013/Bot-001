@@ -167,7 +167,6 @@ var epic = []
 var mythic = []
 var legendary = []
 var fabled = []
-var fabled
 users = ["486985623161274378","485628261494292505","393586279964475393","336507246227881984","193104123506196481","458809225120972800","194966921362407424","495705429150793739","496000252290138122","393083960084922368","205680187394752512","478622622695948312"]
 points = [1827,799,1097,240,0,71,0,0,0,198,4,115,0,2,67,0,0,0,0,0,5,0,0,0]
 thisDay = [13,13,4,13,16,18,16,16,16,2,0,4,0,4,4,0,0,0,0,0,4,0,0,0]
@@ -205,7 +204,7 @@ var streak = [2,1,1,2,1,1,1,1,1,1,0,1,0,1,1,0,0,0,0,0,1,0,0,0]
 var time = [0,0,0,0,0,0,0,0,0,0,329592,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 var bio = ["Just say $info to see my full information.","none","we are going to be in the office you use","none","none","none","none","none","none","none","undefined","undefined"]
 var timeStamp = []
-var i = 0;
+var i = 0
 while (i < users.length){
     timeStamp[i] = new Date()
     i = i + 1
