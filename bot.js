@@ -3047,16 +3047,28 @@ bot.on('message', function (user, userID, channelID, message, evt, typing, embed
                             },
                             title: "New Suggestion",
                             description: message.substring(9, message.length)}}, function(err, res){
+                        a = 0
+                        while (a < 10000){
+                            a = a + 1
+                        }
                         bot.addReaction({
                             channelID: "522548537574162462",
                             messageID: res.id,
                             reaction: ":thumbsup:"
                         }, function(err, res){
+                            a = 0
+                            while (a < 10000){
+                                a = a + 1
+                            }
                             bot.addReaction({
                                 channelID: "522548537574162462",
                                 messageID: res.id,
                                 reaction: ":repeat:"
                             }, function(err, res){
+                                a = 0
+                                while (a < 10000){
+                                    a = a + 1
+                                }
                                 bot.addReaction({
                                     channelID: "522548537574162462",
                                     messageID: res.id,
