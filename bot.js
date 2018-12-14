@@ -3054,7 +3054,7 @@ bot.on('message', function (user, userID, channelID, message, evt, typing, embed
                         bot.addReaction({
                             channelID: "522548537574162462",
                             messageID: myThing,
-                            reaction: "👍"} console.log())})
+                            emoji: "👍"} console.log())})
         }
         switch(cmd) {
             case "feedback":
