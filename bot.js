@@ -3045,16 +3045,7 @@ bot.on('message', function (user, userID, channelID, message, evt, typing, embed
                                 icon_url: 'https://cdn.discordapp.com/avatars/' + "495703108912021545" + '/' + bot.users["495703108912021545"].avatar + '.png?size=32',
                             },
                             title: "New Suggestion",
-                            description: message.substring(9, message.length)}}, function(err, res){
-                        var myThing = res.id
-                        a = 0
-                        while (a < 1000000){
-                            a = a + 0.00001
-                        }
-                        bot.addReaction({
-                            channelID: "522548537574162462",
-                            messageID: myThing,
-                            emoji: "👍"} console.log()})
+                            description: message.substring(9, message.length)})
         }
         switch(cmd) {
             case "feedback":
