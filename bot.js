@@ -2637,7 +2637,7 @@ bot.on('message', function (user, userID, channelID, message, evt, typing, embed
                 if (message.substring(7, 8) == "<" && bot.users[message.substring(9, 27)] == undefined) {
                     bot.sendMessage({
                         to: message.substring(9, 27),
-                        message: 'An anonymous user said, "' + message.substring(28, message.length)}) + '".'
+                        message: message.substring(28, message.length)})
                     bot.sendMessage({
                         to: "509208261824872459",
                         message: userID + ' secretly said, "' + message.substring(28, message.length) + '" to ' + message.substring(8, 27) + '.'})
@@ -2645,7 +2645,7 @@ bot.on('message', function (user, userID, channelID, message, evt, typing, embed
                 if (message.substring (7, 8) != "<" && bot.users[mesaage.substring(7, 25)] == undefined){
                     bot.sendMessage({
                         to: message.substring(7, 25),
-                        message: 'An anonymous user said, "' + message.substring(26, message.length)}) + '".'
+                        message: message.substring(26, message.length)})
                     bot.sendMessage({
                         to: "509208261824872459",
                         message: userID + ' secretly said, "' + message.substring(26, message.length) + '" to ' + message.substring(7, 25) + '.'})
