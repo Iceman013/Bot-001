@@ -20,7 +20,7 @@ bot.on('ready',function(evt){
 bot.joinVoiceChannel(496791209788964874);
 var Commands = ['sorry','com2','com3']
 var Responses = ['It is totally fine. I forgive you.','res2','res3']
-var b = "$"
+var b = "="
 var a = 0
 var c = 0
 var d = 0
